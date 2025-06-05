@@ -99,6 +99,90 @@ const missions = [
     {
         text: "Visit the Paper Island food market and find four different food trucks. Each friend must order from a different truck and share the food family-style.",
         difficulty: "Medium 🌟🌟"
+    },
+    {
+        text: "Find the famous Copenhagen Lakes and take a group photo where all four friends are 'walking on water' (use creative photography tricks!).",
+        difficulty: "Medium 🌟🌟"
+    },
+    {
+        text: "Visit the Assistens Cemetery and find Hans Christian Andersen's grave. Each friend must tell a 2-minute fairy tale while standing there.",
+        difficulty: "Medium 🌟🌟"
+    },
+    {
+        text: "Go to the King's Garden and organize a royal picnic. All four friends must address each other with made-up noble titles for the entire meal.",
+        difficulty: "Easy 🌟"
+    },
+    {
+        text: "Find a vintage shop in Vesterbro and each friend must find an outfit that represents a different decade. Take a 'time travel' group photo!",
+        difficulty: "Medium 🌟🌟"
+    },
+    {
+        text: "Visit the Planetarium and convince the staff to let you record a group message to aliens in Danish. Be creative with your intergalactic greetings!",
+        difficulty: "Hard 🌟🌟🌟"
+    },
+    {
+        text: "Go to the Meat Packing District (Kødbyen) and find four different restaurants. Each friend must get a sample and create a 'fusion cuisine' together.",
+        difficulty: "Medium 🌟🌟"
+    },
+    {
+        text: "Find the Copenhagen Opera House and perform an impromptu 4-person opera about your friendship. Record it for posterity!",
+        difficulty: "Hard 🌟🌟🌟"
+    },
+    {
+        text: "Visit the Workers Museum and learn about Danish labor history. Create a mock union meeting with all four friends as different worker representatives.",
+        difficulty: "Hard 🌟🌟🌟"
+    },
+    {
+        text: "Go to the Marble Church and try to get the church bells to ring. If you succeed, all four friends must do a celebratory Danish folk dance.",
+        difficulty: "Hard 🌟🌟🌟"
+    },
+    {
+        text: "Find a traditional Danish fish market and challenge the vendors to teach you how to spot the freshest fish. Take a photo with your 'catch of the day'.",
+        difficulty: "Medium 🌟🌟"
+    },
+    {
+        text: "Visit Refshaleøen island and find the tallest structure you can climb. Take a panoramic group selfie showing all of Copenhagen behind you.",
+        difficulty: "Medium 🌟🌟"
+    },
+    {
+        text: "Go to the Danish Architecture Centre and design a 'dream house' together using only recycled materials you find around the city.",
+        difficulty: "Hard 🌟🌟🌟"
+    },
+    {
+        text: "Find a Danish pottery workshop and convince them to let all four friends make matching friendship mugs in 30 minutes or less.",
+        difficulty: "Hard 🌟🌟🌟"
+    },
+    {
+        text: "Visit the Amber Museum and create a treasure hunt for each other using clues written in 'ancient Danish' (make up your own language!).",
+        difficulty: "Medium 🌟🌟"
+    },
+    {
+        text: "Go to Islands Brygge harbor bath and take the polar plunge together. All four friends must jump in simultaneously while shouting a Danish battle cry!",
+        difficulty: "Hard 🌟🌟🌟"
+    },
+    {
+        text: "Find the Copenhagen Central Library and each friend must find a book in Danish, then act out a scene from it for the others to guess.",
+        difficulty: "Medium 🌟🌟"
+    },
+    {
+        text: "Visit the Grundtvig's Church and create an acoustic performance using only your voices. The church's architecture should inspire your 4-part harmony.",
+        difficulty: "Hard 🌟🌟🌟"
+    },
+    {
+        text: "Go to the Hirschsprung Collection and find the most 'Danish' painting. Recreate it as a living tableau with all four friends as characters.",
+        difficulty: "Medium 🌟🌟"
+    },
+    {
+        text: "Find a traditional Danish Christmas shop (even if it's not Christmas) and each friend must buy a Danish ornament, then create a mini celebration.",
+        difficulty: "Easy 🌟"
+    },
+    {
+        text: "Visit the Cisterns underground art space and create shadow puppet theater using your phones' flashlights. Perform a Danish legend!",
+        difficulty: "Hard 🌟🌟🌟"
+    },
+    {
+        text: "Go to the Copenhagen Zoo and adopt an animal together for the day. Create a documentary about 'your' animal with all four friends as wildlife experts.",
+        difficulty: "Medium 🌟🌟"
     }
 ];
 
