@@ -186,6 +186,35 @@ const missions = [
     }
 ];
 
+// Secret personal missions - these are shown only once per person!
+const secretMissions = [
+    "Throughout the entire trip, you must speak in rhymes whenever possible. Make it subtle but noticeable.",
+    "You must touch every red object you encounter during the trip. Act like it's completely normal.",
+    "Whenever you see a dog, you must compliment it in Danish (or made-up Danish). Don't explain why.",
+    "You can only walk through doorways backwards. If questioned, just say 'it's for good luck'.",
+    "Every time someone mentions food, you must say 'That reminds me of my grandmother' regardless of context.",
+    "You must take a photo of every clock you see. Pretend it's a normal tourist thing.",
+    "Whenever you sit down, you must first spin around once. Act like everyone does this.",
+    "You can only drink beverages with your non-dominant hand throughout the entire trip.",
+    "Every time you hear Danish being spoken, you must nod knowingly even if you don't understand.",
+    "You must ask 'But is it authentic?' about everything - food, buildings, experiences, even pigeons.",
+    "Whenever entering a new location, you must announce 'I have arrived' in a dramatic voice.",
+    "You can only use stairs by taking them two at a time. One at a time is 'inefficient'.",
+    "You must hum the tune of 'Happy Birthday' whenever you're waiting for something.",
+    "Every time someone takes a group photo, you must make the exact same pose, regardless of what it is.",
+    "You can only sit on the edge of chairs and benches. The middle is 'bad for your chakras'.",
+    "Whenever you see the color blue, you must point it out by saying 'Ah, Copenhagen blue!' knowingly.",
+    "You must greet every statue as if it's a real person. A simple 'Good day!' will do.",
+    "Every time you cross a bridge, you must pause in the middle and look contemplative for exactly 10 seconds.",
+    "You can only enter buildings with your left foot first. It's your 'Copenhagen tradition'.",
+    "Whenever someone mentions the weather, you must respond with 'The Vikings would approve' regardless of conditions.",
+    "You must count out loud to three before eating anything. Don't explain the ritual.",
+    "Every time you see a bicycle, you must say 'That's a nice ride' in an appreciative tone.",
+    "You can only look at maps upside down. Claim it helps you 'see the bigger picture'.",
+    "Whenever entering a shop, you must first browse the items closest to the door for exactly 30 seconds.",
+    "You must end every conversation with a stranger by saying 'May the fjords be with you'."
+];
+
 let missionCount = 0;
 let currentMission = null;
 
@@ -197,9 +226,15 @@ const missionDifficulty = document.getElementById('missionDifficulty');
 const missionCard = document.getElementById('missionCard');
 const missionCountDisplay = document.getElementById('missionCount');
 
+// Secret mission elements
+const generateSecretButton = document.getElementById('generateSecretMission');
+const secretMissionCard = document.getElementById('secretMissionCard');
+const secretMissionText = document.getElementById('secretMissionText');
+
 // Event listeners
 generateButton.addEventListener('click', generateMission);
 shareButton.addEventListener('click', shareMission);
+generateSecretButton.addEventListener('click', generateSecretMission);
 
 function generateMission() {
     // Add animation class
@@ -258,7 +293,50 @@ function shareMission() {
     }
 }
 
-// Add some fun interactions
+function generateSecretMission() {
+    // Check if user already has a secret mission
+    const hasSecretMission = localStorage.getItem('copenhagenSecretMission');
+    
+    if (hasSecretMission) {
+        // Show their existing secret mission
+        const existingMission = localStorage.getItem('copenhagenSecretMissionText');
+        secretMissionText.textContent = existingMission;
+        secretMissionCard.style.display = 'block';
+        generateSecretButton.textContent = '🤫 View My Secret Mission';
+        generateSecretButton.disabled = false;
+        
+        // Scroll to secret mission
+        secretMissionCard.scrollIntoView({ behavior: 'smooth' });
+        return;
+    }
+    
+    // Generate a random secret mission
+    const randomIndex = Math.floor(Math.random() * secretMissions.length);
+    const selectedMission = secretMissions[randomIndex];
+    
+    // Store in localStorage so it persists and can't be regenerated
+    localStorage.setItem('copenhagenSecretMission', 'true');
+    localStorage.setItem('copenhagenSecretMissionText', selectedMission);
+    localStorage.setItem('copenhagenSecretMissionIndex', randomIndex.toString());
+    
+    // Display the mission
+    secretMissionText.textContent = selectedMission;
+    secretMissionCard.style.display = 'block';
+    secretMissionCard.classList.add('animate');
+    
+    // Update button
+    generateSecretButton.textContent = '🤫 View My Secret Mission';
+    
+    // Scroll to secret mission
+    secretMissionCard.scrollIntoView({ behavior: 'smooth' });
+    
+    // Add some dramatic effect
+    setTimeout(() => {
+        alert('🤫 Your secret mission has been assigned! Remember: your friends must NEVER know what you\'re doing or why!');
+    }, 1000);
+}
+
+// Check on page load if user already has a secret mission
 document.addEventListener('DOMContentLoaded', () => {
     // Add floating animation to stats
     const stats = document.querySelectorAll('.stat');
@@ -276,6 +354,12 @@ document.addEventListener('DOMContentLoaded', () => {
     missionCard.addEventListener('mouseleave', () => {
         missionCard.style.transform = 'translateY(0) scale(1)';
     });
+    
+    // Check for existing secret mission
+    const hasSecretMission = localStorage.getItem('copenhagenSecretMission');
+    if (hasSecretMission) {
+        generateSecretButton.textContent = '🤫 View My Secret Mission';
+    }
 });
 
 // Add konami code easter egg for super secret mission

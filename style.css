@@ -185,6 +185,72 @@ footer p {
     animation: slideIn 0.5s ease-out;
 }
 
+.secret-mission-card {
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+    border-radius: 15px;
+    padding: 30px;
+    margin: 30px 0;
+    color: white;
+    box-shadow: 0 10px 30px rgba(44, 62, 80, 0.5);
+    transform: translateY(0);
+    transition: all 0.3s ease;
+    border: 2px solid #e74c3c;
+}
+
+.secret-mission-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(44, 62, 80, 0.7);
+}
+
+.secret-warning {
+    background: rgba(231, 76, 60, 0.2);
+    border: 1px solid #e74c3c;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 15px 0;
+    font-weight: 600;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.secret-instructions {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 20px;
+    font-style: italic;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.secret-mission-button {
+    background: linear-gradient(135deg, #2c3e50, #e74c3c);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(44, 62, 80, 0.4);
+}
+
+.secret-mission-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(44, 62, 80, 0.6);
+}
+
+.secret-mission-button:active {
+    transform: translateY(0);
+}
+
+.secret-mission-button:disabled {
+    background: linear-gradient(135deg, #95a5a6, #7f8c8d);
+    cursor: not-allowed;
+    transform: none;
+}
+
 @media (max-width: 600px) {
     .container {
         padding: 20px;
