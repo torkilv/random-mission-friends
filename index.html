@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secret Missions Copenhagen</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🕵️ Secret Missions Copenhagen 🇩🇰</h1>
+            <p>Your secret mission awaits... for four buddies exploring the Danish capital!</p>
+        </header>
+
+        <main>
+            <div class="mission-card" id="missionCard">
+                <div class="mission-content">
+                    <h2>🎯 Your Mission</h2>
+                    <div class="mission-text" id="missionText">
+                        Click the button below to receive your secret mission!
+                    </div>
+                    <div class="mission-difficulty" id="missionDifficulty"></div>
+                </div>
+            </div>
+
+            <div class="button-container">
+                <button class="mission-button" id="generateMission">
+                    Generate Secret Mission
+                </button>
+                <button class="share-button" id="shareButton" style="display: none;">
+                    📤 Share Mission
+                </button>
+            </div>
+
+            <div class="stats">
+                <div class="stat">
+                    <span class="stat-number" id="missionCount">0</span>
+                    <span class="stat-label">Missions Generated</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">4</span>
+                    <span class="stat-label">Brave Buddies</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">1</span>
+                    <span class="stat-label">Amazing City</span>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>🌟 Make memories, complete missions, conquer Copenhagen! 🌟</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
